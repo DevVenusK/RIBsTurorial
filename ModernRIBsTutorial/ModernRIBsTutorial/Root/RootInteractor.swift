@@ -9,6 +9,7 @@ import ModernRIBs
 
 protocol RootRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToLoggedIn(playerName player1Name: String, player2Name: String)
 }
 
 protocol RootPresentable: Presentable {
@@ -21,7 +22,7 @@ protocol RootListener: AnyObject {
 }
 
 final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
-
+  
     weak var router: RootRouting?
     weak var listener: RootListener?
 
@@ -40,5 +41,9 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func didLogin(withPlayer player1Name: String, player2Name: String) {
+        router?.routeToLoggedIn(playerName: player1Name, player2Name: player2Name)
     }
 }
