@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1BB4D927904FA7003E090B /* TicTacToeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D527904FA7003E090B /* TicTacToeRouter.swift */; };
+		3C1BB4DA27904FA7003E090B /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D627904FA7003E090B /* TicTacToeViewController.swift */; };
+		3C1BB4DB27904FA7003E090B /* TicTacToeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D727904FA7003E090B /* TicTacToeBuilder.swift */; };
+		3C1BB4DC27904FA7003E090B /* TicTacToeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D827904FA7003E090B /* TicTacToeInteractor.swift */; };
+		3C1BB4DF279050BE003E090B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C1BB4DE279050BE003E090B /* SnapKit */; };
 		3C84ACEE27903FFE0076044B /* OffGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84ACEA27903FFE0076044B /* OffGameRouter.swift */; };
 		3C84ACEF27903FFE0076044B /* OffGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84ACEB27903FFE0076044B /* OffGameViewController.swift */; };
 		3C84ACF027903FFE0076044B /* OffGameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84ACEC27903FFE0076044B /* OffGameBuilder.swift */; };
@@ -52,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C1BB4D527904FA7003E090B /* TicTacToeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeRouter.swift; sourceTree = "<group>"; };
+		3C1BB4D627904FA7003E090B /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
+		3C1BB4D727904FA7003E090B /* TicTacToeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeBuilder.swift; sourceTree = "<group>"; };
+		3C1BB4D827904FA7003E090B /* TicTacToeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeInteractor.swift; sourceTree = "<group>"; };
 		3C84ACEA27903FFE0076044B /* OffGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameRouter.swift; sourceTree = "<group>"; };
 		3C84ACEB27903FFE0076044B /* OffGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameViewController.swift; sourceTree = "<group>"; };
 		3C84ACEC27903FFE0076044B /* OffGameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameBuilder.swift; sourceTree = "<group>"; };
@@ -88,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DF5394277AB9E3006FA6A0 /* ModernRIBs in Frameworks */,
+				3C1BB4DF279050BE003E090B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1BB4D427904F92003E090B /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				3C1BB4D527904FA7003E090B /* TicTacToeRouter.swift */,
+				3C1BB4D627904FA7003E090B /* TicTacToeViewController.swift */,
+				3C1BB4D727904FA7003E090B /* TicTacToeBuilder.swift */,
+				3C1BB4D827904FA7003E090B /* TicTacToeInteractor.swift */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
 		3C84ACE927903FAF0076044B /* OffGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +173,7 @@
 		51DF5361277AB9C6006FA6A0 /* ModernRIBsTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				3C1BB4D427904F92003E090B /* TicTacToe */,
 				3C84ACE927903FAF0076044B /* OffGame */,
 				51DF539E277ABCA0006FA6A0 /* AppStart */,
 				51DF53A1277ABD66006FA6A0 /* LoggedOut */,
@@ -232,6 +254,7 @@
 			name = ModernRIBsTutorial;
 			packageProductDependencies = (
 				51DF5393277AB9E3006FA6A0 /* ModernRIBs */,
+				3C1BB4DE279050BE003E090B /* SnapKit */,
 			);
 			productName = ModernRIBsTutorial;
 			productReference = 51DF535F277AB9C6006FA6A0 /* ModernRIBsTutorial.app */;
@@ -307,6 +330,7 @@
 			mainGroup = 51DF5356277AB9C6006FA6A0;
 			packageReferences = (
 				51DF5392277AB9E3006FA6A0 /* XCRemoteSwiftPackageReference "ModernRIBs" */,
+				3C1BB4DD279050BD003E090B /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 51DF5360277AB9C6006FA6A0 /* Products */;
 			projectDirPath = "";
@@ -351,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51DF539A277ABAFB006FA6A0 /* RootRouter.swift in Sources */,
+				3C1BB4DC27904FA7003E090B /* TicTacToeInteractor.swift in Sources */,
 				5177BB12278FE3A700F7D6C4 /* LoggedInRouter.swift in Sources */,
 				51DF53A9277ABE7F006FA6A0 /* LoggedOutViewController.swift in Sources */,
 				51DF5363277AB9C6006FA6A0 /* AppDelegate.swift in Sources */,
@@ -360,13 +385,16 @@
 				51DF539B277ABAFB006FA6A0 /* RootViewController.swift in Sources */,
 				5177BB14278FE3A700F7D6C4 /* LoggedInInteractor.swift in Sources */,
 				51DF539C277ABAFB006FA6A0 /* RootBuilder.swift in Sources */,
+				3C1BB4DB27904FA7003E090B /* TicTacToeBuilder.swift in Sources */,
 				3C84ACF027903FFE0076044B /* OffGameBuilder.swift in Sources */,
 				51DF53A8277ABE7F006FA6A0 /* LoggedOutRouter.swift in Sources */,
 				51DF539D277ABAFB006FA6A0 /* RootInteractor.swift in Sources */,
+				3C1BB4D927904FA7003E090B /* TicTacToeRouter.swift in Sources */,
 				5177BB13278FE3A700F7D6C4 /* LoggedInBuilder.swift in Sources */,
 				51DF53AB277ABE7F006FA6A0 /* LoggedOutInteractor.swift in Sources */,
 				51DF53A0277ABCBB006FA6A0 /* AppComponent.swift in Sources */,
 				51DF53AD277ABFC0006FA6A0 /* RootComponent+LoggedOut.swift in Sources */,
+				3C1BB4DA27904FA7003E090B /* TicTacToeViewController.swift in Sources */,
 				3C84ACEF27903FFE0076044B /* OffGameViewController.swift in Sources */,
 				51DF53AA277ABE7F006FA6A0 /* LoggedOutBuilder.swift in Sources */,
 			);
@@ -704,6 +732,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3C1BB4DD279050BD003E090B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		51DF5392277AB9E3006FA6A0 /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DevYeom/ModernRIBs.git";
@@ -715,6 +751,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3C1BB4DE279050BE003E090B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C1BB4DD279050BD003E090B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		51DF5393277AB9E3006FA6A0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 51DF5392277AB9E3006FA6A0 /* XCRemoteSwiftPackageReference "ModernRIBs" */;

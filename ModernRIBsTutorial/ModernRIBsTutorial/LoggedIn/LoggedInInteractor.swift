@@ -10,6 +10,8 @@ import ModernRIBs
 protocol LoggedInRouting: Routing {
     func cleanupViews()
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToTicTacToe()
+    func routeToOffGame()
 }
 
 protocol LoggedInListener: AnyObject {
@@ -35,5 +37,15 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
 
         router?.cleanupViews()
         // TODO: Pause any business logic.
+    }
+    
+    // MARK: - TicTacToeListner
+    func gameDidEnd() {
+        router?.routeToOffGame()
+    }
+    
+    // MARK: - OffGameListener
+    func startTicTacToe() {
+        router?.routeToTicTacToe()
     }
 }

@@ -7,7 +7,7 @@
 
 import ModernRIBs
 
-protocol LoggedInInteractable: Interactable, OffGameListener {
+protocol LoggedInInteractable: Interactable, OffGameListener, TicTacToeListener {
     var router: LoggedInRouting? { get set }
     var listener: LoggedInListener? { get set }
 }
@@ -25,9 +25,11 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
     // TODO: Constructor inject child builder protocols to allow building children.
     init(interactor: LoggedInInteractable,
          viewController: LoggedInViewControllable,
-         offGameBuilder: OffGameBuildable) {
+         offGameBuilder: OffGameBuildable,
+         ticTacToeBulider: TicTacToeBuildable) {
         self.viewController = viewController
         self.offGameBuilder = offGameBuilder
+        self.ticTacToeBuilder = ticTacToeBulider
         super.init(interactor: interactor)
         interactor.router = self
     }
@@ -45,10 +47,24 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
             }
     }
     
+    func routeToTicTacToe() {
+        detachCurrentChild()
+
+        let ticTacToe = ticTacToeBuilder.build(withListener: interactor)
+        currentChild = ticTacToe
+        attachChild(ticTacToe)
+        viewController.present(viewController: ticTacToe.viewControllable)
+    }
+    
+    func routeToOffGame() {
+        detachCurrentChild()
+        attachOffGame()
+    }
+    
     // MARK: - Private
     
     private let offGameBuilder: OffGameBuildable
-    
+    private let ticTacToeBuilder: TicTacToeBuildable
     private let viewController: LoggedInViewControllable
     
     private var currentChild: ViewableRouting?
@@ -59,5 +75,12 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
         self.currentChild = offGame
         attachChild(offGame)
         viewController.present(viewController: offGame.viewControllable)
+    }
+    
+    private func detachCurrentChild() {
+        if let currentChild = currentChild {
+            detachChild(currentChild)
+            viewController.dismiss(viewController: currentChild.viewControllable)
+        }
     }
 }
