@@ -43,10 +43,10 @@ extension LoggedOutViewController {
             textField.placeholder = "Player 1 name"
             return textField
         }()
-        
+
         self.player1Field = player1Field
         view.addSubview(player1Field)
-        
+
         [player1Field.topAnchor.constraint(equalTo: view.topAnchor,
                                            constant: 100),
          player1Field.leadingAnchor.constraint(equalTo: view.leadingAnchor,
@@ -55,7 +55,7 @@ extension LoggedOutViewController {
                                                 constant: -40),
          player1Field.heightAnchor.constraint(equalToConstant: 40)]
             .forEach { $0.isActive = true }
-        
+
         let player2Field: UITextField = {
             let textField = UITextField()
             textField.translatesAutoresizingMaskIntoConstraints = false
@@ -63,17 +63,17 @@ extension LoggedOutViewController {
             textField.placeholder = "Player 2 name"
             return textField
         }()
-        
+
         self.player2Field = player2Field
         view.addSubview(player2Field)
-        
+
         [player2Field.topAnchor.constraint(equalTo: player1Field.bottomAnchor,
                                            constant: 20),
          player2Field.leadingAnchor.constraint(equalTo: player1Field.leadingAnchor),
          player2Field.trailingAnchor.constraint(equalTo: player1Field.trailingAnchor),
          player2Field.heightAnchor.constraint(equalTo: player1Field.heightAnchor)]
             .forEach { $0.isActive = true }
-        
+
         return (player1Field, player2Field)
     }
     

@@ -1,34 +1,34 @@
 //
-//  RootInteractor.swift
+//  OffGameInteractor.swift
 //  ModernRIBsTutorial
 //
-//  Created by Ppop on 2021/12/28.
+//  Created by 김효성 on 2022/01/13.
 //
 
 import ModernRIBs
 
-protocol RootRouting: ViewableRouting {
+protocol OffGameRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
-    func routeToLoggedIn(playerName player1Name: String, player2Name: String)
 }
 
-protocol RootPresentable: Presentable {
-    var listener: RootPresentableListener? { get set }
+protocol OffGamePresentable: Presentable {
+    var listener: OffGamePresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol RootListener: AnyObject {
+protocol OffGameListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func startTicTacToe()
 }
 
-final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
-  
-    weak var router: RootRouting?
-    weak var listener: RootListener?
+final class OffGameInteractor: PresentableInteractor<OffGamePresentable>, OffGameInteractable, OffGamePresentableListener {
+
+    weak var router: OffGameRouting?
+    weak var listener: OffGameListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: RootPresentable) {
+    override init(presenter: OffGamePresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -43,7 +43,9 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // TODO: Pause any business logic.
     }
     
-    func didLogin(withPlayer player1Name: String, player2Name: String) {
-        router?.routeToLoggedIn(playerName: player1Name, player2Name: player2Name)
+    // MARK: - OffGamePresentableListener
+
+    func startGame() {
+        listener?.startTicTacToe()
     }
 }
