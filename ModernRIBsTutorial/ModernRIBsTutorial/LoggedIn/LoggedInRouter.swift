@@ -69,7 +69,6 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
     
     private var currentChild: ViewableRouting?
     
-    
     private func attachOffGame() {
         let offGame = offGameBuilder.build(withListener: interactor)
         self.currentChild = offGame

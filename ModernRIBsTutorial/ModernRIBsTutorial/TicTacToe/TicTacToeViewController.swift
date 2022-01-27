@@ -11,14 +11,16 @@ import UIKit
 
 protocol TicTacToePresentableListener: AnyObject {
     func placeCurrentPlayerMark(atRow row: Int, col: Int)
-    func closeGame()
 }
 
 final class TicTacToeViewController: UIViewController, TicTacToePresentable, TicTacToeViewControllable {
 
     weak var listener: TicTacToePresentableListener?
 
-    init() {
+    init(player1Name: String,
+         player2Name: String) {
+        self.player1Name = player1Name
+        self.player2Name = player2Name
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -41,24 +43,31 @@ final class TicTacToeViewController: UIViewController, TicTacToePresentable, Tic
         cell?.backgroundColor = playerType.color
     }
 
-    func announce(winner: PlayerType) {
+    func announce(winner: PlayerType?, withCompletionHandler handler: @escaping () -> ()) {
         let winnerString: String = {
-            switch winner {
-            case .player1:
-                return "Red"
-            case .player2:
-                return "Blue"
+            if let winner = winner {
+                switch winner {
+                case .player1:
+                    return "\(player1Name) Won!"
+                case .player2:
+                    return "\(player2Name) Won!"
+                }
+            } else {
+                return "It's a Tie"
             }
         }()
-        let alert = UIAlertController(title: "\(winnerString) Won!", message: nil, preferredStyle: .alert)
-        let closeAction = UIAlertAction(title: "Close Game", style: UIAlertAction.Style.default) { [weak self] _ in
-            self?.listener?.closeGame()
+        let alert = UIAlertController(title: winnerString, message: nil, preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "Close Game", style: UIAlertAction.Style.default) { _ in
+            handler()
         }
         alert.addAction(closeAction)
         present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Private
+
+    private let player2Name: String
+    private let player1Name: String
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

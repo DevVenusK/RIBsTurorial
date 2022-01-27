@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C01C75A27A28BE7002629FD /* ScoreStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C01C75927A28BE7002629FD /* ScoreStream.swift */; };
 		3C1BB4D927904FA7003E090B /* TicTacToeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D527904FA7003E090B /* TicTacToeRouter.swift */; };
 		3C1BB4DA27904FA7003E090B /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D627904FA7003E090B /* TicTacToeViewController.swift */; };
 		3C1BB4DB27904FA7003E090B /* TicTacToeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D727904FA7003E090B /* TicTacToeBuilder.swift */; };
 		3C1BB4DC27904FA7003E090B /* TicTacToeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4D827904FA7003E090B /* TicTacToeInteractor.swift */; };
 		3C1BB4DF279050BE003E090B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C1BB4DE279050BE003E090B /* SnapKit */; };
+		3C1BB4E227905711003E090B /* RootRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BB4E127905711003E090B /* RootRouterTests.swift */; };
 		3C84ACEE27903FFE0076044B /* OffGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84ACEA27903FFE0076044B /* OffGameRouter.swift */; };
 		3C84ACEF27903FFE0076044B /* OffGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84ACEB27903FFE0076044B /* OffGameViewController.swift */; };
 		3C84ACF027903FFE0076044B /* OffGameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84ACEC27903FFE0076044B /* OffGameBuilder.swift */; };
 		3C84ACF127903FFE0076044B /* OffGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84ACED27903FFE0076044B /* OffGameInteractor.swift */; };
+		3CC556B827A29A2500BA5BC0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC556B727A29A2500BA5BC0 /* RxCocoa */; };
+		3CC556BA27A29A2500BA5BC0 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC556B927A29A2500BA5BC0 /* RxRelay */; };
+		3CC556BC27A29A2500BA5BC0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3CC556BB27A29A2500BA5BC0 /* RxSwift */; };
 		5177BB12278FE3A700F7D6C4 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5177BB0F278FE3A700F7D6C4 /* LoggedInRouter.swift */; };
 		5177BB13278FE3A700F7D6C4 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5177BB10278FE3A700F7D6C4 /* LoggedInBuilder.swift */; };
 		5177BB14278FE3A700F7D6C4 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5177BB11278FE3A700F7D6C4 /* LoggedInInteractor.swift */; };
@@ -57,10 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C01C75927A28BE7002629FD /* ScoreStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStream.swift; sourceTree = "<group>"; };
 		3C1BB4D527904FA7003E090B /* TicTacToeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeRouter.swift; sourceTree = "<group>"; };
 		3C1BB4D627904FA7003E090B /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 		3C1BB4D727904FA7003E090B /* TicTacToeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeBuilder.swift; sourceTree = "<group>"; };
 		3C1BB4D827904FA7003E090B /* TicTacToeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeInteractor.swift; sourceTree = "<group>"; };
+		3C1BB4E127905711003E090B /* RootRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterTests.swift; sourceTree = "<group>"; };
 		3C84ACEA27903FFE0076044B /* OffGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameRouter.swift; sourceTree = "<group>"; };
 		3C84ACEB27903FFE0076044B /* OffGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameViewController.swift; sourceTree = "<group>"; };
 		3C84ACEC27903FFE0076044B /* OffGameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameBuilder.swift; sourceTree = "<group>"; };
@@ -96,7 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC556B827A29A2500BA5BC0 /* RxCocoa in Frameworks */,
 				51DF5394277AB9E3006FA6A0 /* ModernRIBs in Frameworks */,
+				3CC556BC27A29A2500BA5BC0 /* RxSwift in Frameworks */,
+				3CC556BA27A29A2500BA5BC0 /* RxRelay in Frameworks */,
 				3C1BB4DF279050BE003E090B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +139,14 @@
 			path = TicTacToe;
 			sourceTree = "<group>";
 		};
+		3C1BB4E027905702003E090B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				3C1BB4E127905711003E090B /* RootRouterTests.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		3C84ACE927903FAF0076044B /* OffGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,8 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				5177BB0F278FE3A700F7D6C4 /* LoggedInRouter.swift */,
-				5177BB10278FE3A700F7D6C4 /* LoggedInBuilder.swift */,
 				5177BB11278FE3A700F7D6C4 /* LoggedInInteractor.swift */,
+				5177BB10278FE3A700F7D6C4 /* LoggedInBuilder.swift */,
+				3C01C75927A28BE7002629FD /* ScoreStream.swift */,
 			);
 			path = LoggedIn;
 			sourceTree = "<group>";
@@ -189,6 +208,7 @@
 		51DF5378277AB9C8006FA6A0 /* ModernRIBsTutorialTests */ = {
 			isa = PBXGroup;
 			children = (
+				3C1BB4E027905702003E090B /* Root */,
 				51DF5379277AB9C8006FA6A0 /* ModernRIBsTutorialTests.swift */,
 			);
 			path = ModernRIBsTutorialTests;
@@ -255,6 +275,9 @@
 			packageProductDependencies = (
 				51DF5393277AB9E3006FA6A0 /* ModernRIBs */,
 				3C1BB4DE279050BE003E090B /* SnapKit */,
+				3CC556B727A29A2500BA5BC0 /* RxCocoa */,
+				3CC556B927A29A2500BA5BC0 /* RxRelay */,
+				3CC556BB27A29A2500BA5BC0 /* RxSwift */,
 			);
 			productName = ModernRIBsTutorial;
 			productReference = 51DF535F277AB9C6006FA6A0 /* ModernRIBsTutorial.app */;
@@ -331,6 +354,7 @@
 			packageReferences = (
 				51DF5392277AB9E3006FA6A0 /* XCRemoteSwiftPackageReference "ModernRIBs" */,
 				3C1BB4DD279050BD003E090B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3CC556B627A29A2500BA5BC0 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 51DF5360277AB9C6006FA6A0 /* Products */;
 			projectDirPath = "";
@@ -394,6 +418,7 @@
 				51DF53AB277ABE7F006FA6A0 /* LoggedOutInteractor.swift in Sources */,
 				51DF53A0277ABCBB006FA6A0 /* AppComponent.swift in Sources */,
 				51DF53AD277ABFC0006FA6A0 /* RootComponent+LoggedOut.swift in Sources */,
+				3C01C75A27A28BE7002629FD /* ScoreStream.swift in Sources */,
 				3C1BB4DA27904FA7003E090B /* TicTacToeViewController.swift in Sources */,
 				3C84ACEF27903FFE0076044B /* OffGameViewController.swift in Sources */,
 				51DF53AA277ABE7F006FA6A0 /* LoggedOutBuilder.swift in Sources */,
@@ -404,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1BB4E227905711003E090B /* RootRouterTests.swift in Sources */,
 				51DF537A277AB9C8006FA6A0 /* ModernRIBsTutorialTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,6 +766,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		3CC556B627A29A2500BA5BC0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		51DF5392277AB9E3006FA6A0 /* XCRemoteSwiftPackageReference "ModernRIBs" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DevYeom/ModernRIBs.git";
@@ -755,6 +789,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3C1BB4DD279050BD003E090B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		3CC556B727A29A2500BA5BC0 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC556B627A29A2500BA5BC0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		3CC556B927A29A2500BA5BC0 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC556B627A29A2500BA5BC0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		3CC556BB27A29A2500BA5BC0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CC556B627A29A2500BA5BC0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 		51DF5393277AB9E3006FA6A0 /* ModernRIBs */ = {
 			isa = XCSwiftPackageProductDependency;
